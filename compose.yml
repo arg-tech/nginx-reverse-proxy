@@ -7,3 +7,5 @@ services:
     volumes:
       - ./sites-enabled:/etc/nginx/sites-enabled
       - ./ssl:/etc/nginx/ssl
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

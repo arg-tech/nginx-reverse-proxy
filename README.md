@@ -2,7 +2,7 @@
 1. Clone the repository
 2. Create three SSL secrets in the `ssl/secrets` folder (paths relative to root of this repo)
    1. `sudo openssl req -x509 -nodes -days 36500 -newkey rsa:2048 -keyout ssl/secrets/self-signed.key -out ssl/secrets/self-signed.crt`
-   2. `sudo openssl dhparam -out /etc/nginx/dhparam.pem 4096`
+   2. `sudo openssl dhparam -out ssl/secrets/dhparam.pem 4096`
 3. Copy configuration files for sites into `sites-enabled/`
 4. Run `docker compose up -d --build`
 
