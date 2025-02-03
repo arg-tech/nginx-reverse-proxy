@@ -2,8 +2,9 @@ services:
   nginx-reverse-proxy:
     container_name: nginx-reverse-proxy
     build: .
+    restart: always
     ports:
-      - "8080:443"
+      - "443:443"
     volumes:
       - ./sites-enabled:/etc/nginx/sites-enabled
       - ./ssl:/etc/nginx/ssl
